@@ -97,6 +97,7 @@ function encode(str) {
 function decode(str) {
   let decode = "";
   for(let letters of str){
+
     if(letters === "1"){
       encode += "a";
     } else if (letters === "2"){
