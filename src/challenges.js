@@ -59,35 +59,59 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(arr) {
-
   let fizzBuzz = [];
-  
   for(let index = 0; index < arr.length; index += 1){
-
     if(arr[index] % 3 !== 0 && arr[index] % 5 !== 0){
       fizzBuzz.push("bug!");
-      
     } else if(arr[index] % 3 === 0 && arr[index] % 5 === 0){
       fizzBuzz.push("fizzBuzz");
-      
     } else if(arr[index] % 3 === 0){
       fizzBuzz.push("fizz");
-      
     } else if(arr[index] % 5 === 0){
       fizzBuzz.push("buzz");
-      
     }
   }
-
   return fizzBuzz;
 }
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let encode = "";
+  for(let letters of str){
+    if(letters === "a"){
+      encode += "1";
+    } else if (letters === "e"){
+      encode += "2";
+    } else if (letters === "i"){
+      encode += "3";
+    } else if (letters === "o"){
+      encode += "4";
+    } else if (letters === "u"){
+      encode += "5";
+    } else{
+      encode += letters;
+    }
+  }
+  return encode; 
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let decode = "";
+  for(let letters of str){
+    if(letters === "1"){
+      encode += "a";
+    } else if (letters === "2"){
+      encode += "e";
+    } else if (letters === "3"){
+      encode += "i";
+    } else if (letters === "4"){
+      encode += "o";
+    } else if (letters === "5"){
+      encode += "u";
+    } else{
+      encode += letters;
+    }
+  }
+  return decode;
 }
 
 module.exports = {
