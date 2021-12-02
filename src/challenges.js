@@ -4,7 +4,6 @@ function compareTrue(boolean1, boolean2) {
     return true;
   } 
     return false;
-  
 }
 
 // Desafio 2
@@ -21,23 +20,35 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-
   let last = arr[arr.length - 1];
   let first = arr[0];
   let concat = last + ', ' + first;
-
   return concat;
-
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let scorre = 3*wins + 1*ties;
+  return scorre;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  // Find the highest number
+  let num = arr[0];
+  for(let index = 0; index < arr.length; index += 1){
+    if(arr[index] > num){
+      num = arr[index];
+    }
+  }
+  // count
+  let count = 0;
+  for(let index = 0; index < arr.length; index += 1){
+    if(arr[index] === num){
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
