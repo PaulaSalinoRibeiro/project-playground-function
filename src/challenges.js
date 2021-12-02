@@ -8,13 +8,15 @@ function compareTrue(boolean1, boolean2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calcArea = (base*height)/2
+  return calcArea;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) { 
+  let splitStc = str.split(' ');
+  return splitStc;
 }
 
 // Desafio 4
