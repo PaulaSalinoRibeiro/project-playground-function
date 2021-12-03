@@ -75,8 +75,11 @@ function fizzBuzz(arr) {
 }
 // Desafio 9
 function encode(str) {
-  let encode = "";
+
+  let encode = '';
+
   for(let letters of str){
+
     if(letters === "a"){
       encode += "1";
     } else if (letters === "e"){
@@ -91,27 +94,31 @@ function encode(str) {
       encode += letters;
     }
   }
-  return encode; 
+  return encode 
 }
 
 function decode(str) {
-  let decode = "";
+
+  let decode = '';
+
   for(let letters of str){
+
     if(letters === "1"){
-      encode += "a";
+      decode += "a";
     } else if (letters === "2"){
-      encode += "e";
+      decode += "e";
     } else if (letters === "3"){
-      encode += "i";
+      decode += "i";
     } else if (letters === "4"){
-      encode += "o";
+      decode += "o";
     } else if (letters === "5"){
-      encode += "u";
+      decode += "u";
     } else{
-      encode += letters;
+      decode += letters;
     }
   }
-  return decode;
+  
+  return decode 
 }
 
 module.exports = {
