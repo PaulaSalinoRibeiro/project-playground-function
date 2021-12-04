@@ -14,12 +14,33 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-
-// check arr.length > 11
-// check if any number is negative or highest then 9
-// check if any number repet more that 3 times
-// imprim number with (12) 34567-8901
-  
+  let count;
+  let phoneNumber = '';
+  if(arr.length !== 11){
+      return "Array com tamanho incorreto."
+  }
+  for(let num1 of arr){
+      if(num1 < 0 || num1 > 9){
+          return "não é possível gerar um número de telefone com esses valores"
+      }
+  }
+  for(let index = 0; index < arr.length; index +=1){
+      if(count >= 3){
+        break;
+      }
+      count = 0;
+      for(i = 0; i < arr.length; i += 1){
+          if(arr[index] === arr[i]){
+              count += 1;
+          }
+      }
+  }
+  if( count >= 3){
+      return "não é possível gerar um número de telefone com esses valores"
+  } else {
+      phoneNumber += '(' + arr[0] + arr[1] + ')' + ' ' + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + '-' + arr[7] + arr[8] + arr[9] + arr[10]
+  }
+  return phoneNumber  
 }
 
 // Desafio 12
